@@ -71,7 +71,7 @@ public class DisciplinasController {
 	}
 	
 	
-	@PostMapping("comentarios/{id}")
+	@PostMapping("comentarios/auth/{id}")
 	private ResponseEntity<Disciplina> adicionaComentarioPorId(@PathVariable Long id, @RequestBody comentarioDTO comentario) {
 		try {
 			Disciplina disciplina = this.disciplinaService.adicionaComentarioPorId(id, comentario);
